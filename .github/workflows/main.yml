@@ -215,4 +215,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: mpv-build/mpv/release/mpv.dmg
-          asset_name: mpv-${{ steps.build_mpv.outputs.MPV_C
+          asset_name: mpv-${{ steps.build_mpv.outputs.MPV_COMMITID }}-${{ github.run_number }}.dmg
+          asset_content_type: application/x-apple-diskimage
