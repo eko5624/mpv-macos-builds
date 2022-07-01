@@ -55,6 +55,9 @@ jobs:
           curl -ksJLO https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
           hdiutil attach vulkansdk*.dmg
           sudo /Volumes/vulkansdk*/InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/vulkansdk --accept-licenses --default-answer --confirm-command install
+          install_name_tool -id /usr/local/lib/libshaderc_shared.1.dylib /usr/local/lib/libshaderc_shared.1.dylib
+          install_name_tool -id /usr/local/lib/libspirv-cross-c-shared.0.dylib /usr/local/lib/libspirv-cross-c-shared.0.dylib
+          install_name_tool -id /usr/local/lib/libvulkan.1.dylib /usr/local/lib/libvulkan.1.dylib
 
           # Switch to Xcode 12.5.1
           sudo xcode-select --reset
