@@ -55,8 +55,8 @@ jobs:
           hdiutil attach vulkansdk*.dmg
           sudo /Volumes/vulkansdk*/InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/vulkansdk --accept-licenses --default-answer --confirm-command install
           install_name_tool -id "/usr/local/macOS/lib/libshaderc_shared.1.dylib" "/usr/local/macOS/lib/libshaderc_shared.1.dylib"
-          install_name_tool -id "/usr/local/macOS/lib/libspirv-cross-c-shared.0.49.0.dylib" "/usr/local/macOS/lib/libspirv-cross-c-shared.0.dylib"
-          install_name_tool -id "/usr/local/macOS/lib/libvulkan.1.3.216.dylib" "/usr/local/macOS/lib/libvulkan.1.dylib"
+          install_name_tool -id "/usr/local/macOS/lib/libspirv-cross-c-shared.0.49.0.dylib" "/usr/local/macOS/lib/libspirv-cross-c-shared.0.49.0.dylib"
+          install_name_tool -id "/usr/local/macOS/lib/libvulkan.1.3.216.dylib" "/usr/local/macOS/lib/libvulkan.1.3.216.dylib"
           # Switch to Xcode 12.5.1
           sudo xcode-select --reset
           sudo xcode-select -s /Applications/Xcode_12.5.1.app/Contents/Developer
