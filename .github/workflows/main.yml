@@ -71,7 +71,7 @@ jobs:
           brew install meson pcre gettext glib libpng libxau libxdmcp libxcb libx11 graphite2 cairo brotli jpeg libtiff little-cms2 lua@5.1 zimg libbluray nasm dav1d bzip2 libmodplug zlib uchardet libepoxy libdvdcss libdvdread libdvdnav mujs libass rubberband
           
           # libplacebo
-          /usr/local/Cellar/meson/0.62.1/libexec/bin/python3.10 -m pip install mako
+          /usr/local/Cellar/meson/0.62.2/libexec/bin/python3.10 -m pip install mako
           git clone https://github.com/haasn/libplacebo.git
           cd libplacebo
           DIR=./build
