@@ -58,6 +58,8 @@ jobs:
           #sudo ln -s /usr/local/vulkansdk/macOS/lib/libshaderc_shared.dylib /usr/local/lib/libshaderc_shared.1.dylib
           #sudo ln -s /usr/local/vulkansdk/macOS/lib/libspirv-cross-c-shared.dylib /usr/local/lib/libspirv-cross-c-shared.0.dylib
           #sudo ln -s /usr/local/vulkansdk/macOS/lib/libvulkan.dylib /usr/local/lib/libvulkan.1.dylib
+          sed -i "" "s/prefix=\/usr\/local/prefix=${pcfiledir}\/..\/../" /usr/local/vulkansdk/macOS/lib/pkgconfig/*.pc
+
 
           # Switch to Xcode 12.5.1
           sudo xcode-select --reset
