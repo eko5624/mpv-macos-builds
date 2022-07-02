@@ -52,13 +52,13 @@ jobs:
           curl -ksJLO https://download.swift.org/swift-4.2.4-release/xcode/swift-4.2.4-RELEASE/swift-4.2.4-RELEASE-osx.pkg
           sudo installer -pkg swift-4.2.4-RELEASE-osx.pkg -target /
           # Vulkan SDK
-          #curl -ksJLO https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
-          #hdiutil attach vulkansdk*.dmg
-          #sudo /Volumes/vulkansdk*/InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/vulkansdk --accept-licenses --default-answer --confirm-command install
-          #sudo ln -s /usr/local/vulkansdk/macOS/lib/libshaderc_shared.dylib /usr/local/lib/libshaderc_shared.1.dylib
-          #sudo ln -s /usr/local/vulkansdk/macOS/lib/libspirv-cross-c-shared.dylib /usr/local/lib/libspirv-cross-c-shared.0.dylib
-          #sudo ln -s /usr/local/vulkansdk/macOS/lib/libvulkan.dylib /usr/local/lib/libvulkan.1.dylib
-          #sudo sed -i "" "s/prefix=\/usr\/local/prefix=${pcfiledir}\/..\/../" /usr/local/vulkansdk/macOS/lib/pkgconfig/*.pc
+          # curl -ksJLO https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
+          # hdiutil attach vulkansdk*.dmg
+          # sudo /Volumes/vulkansdk*/InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/vulkansdk --accept-licenses --default-answer --confirm-command install
+          # sudo ln -s /usr/local/vulkansdk/macOS/lib/libshaderc_shared.dylib /usr/local/lib/libshaderc_shared.1.dylib
+          # sudo ln -s /usr/local/vulkansdk/macOS/lib/libspirv-cross-c-shared.dylib /usr/local/lib/libspirv-cross-c-shared.0.dylib
+          # sudo ln -s /usr/local/vulkansdk/macOS/lib/libvulkan.dylib /usr/local/lib/libvulkan.1.dylib
+          # sudo sed -i "" "s/prefix=\/usr\/local/prefix=${pcfiledir}\/..\/../" /usr/local/vulkansdk/macOS/lib/pkgconfig/*.pc
 
 
           # Switch to Xcode 12.5.1
