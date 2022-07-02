@@ -113,7 +113,6 @@ jobs:
             '--enable-cplugins' \
             '--enable-javascript' \
             '--enable-zimg' \
-            # '--enable-vulkan' \
             '--enable-libmpv-shared' \
             '--enable-swift-static' \
             '--swift-flags=-target x86_64-apple-macosx10.13' \
