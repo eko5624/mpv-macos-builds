@@ -52,9 +52,9 @@ jobs:
           curl -ksJLO https://download.swift.org/swift-4.2.4-release/xcode/swift-4.2.4-RELEASE/swift-4.2.4-RELEASE-osx.pkg
           sudo installer -pkg swift-4.2.4-RELEASE-osx.pkg -target /
           # Vulkan SDK
-          curl -ksJLO https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
-          hdiutil attach vulkansdk*.dmg
-          sudo /Volumes/vulkansdk*/InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/vulkansdk --accept-licenses --default-answer --confirm-command install
+          #curl -ksJLO https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
+          #hdiutil attach vulkansdk*.dmg
+          #sudo /Volumes/vulkansdk*/InstallVulkan.app/Contents/MacOS/InstallVulkan --root /usr/local/vulkansdk --accept-licenses --default-answer --confirm-command install
           #sudo ln -s /usr/local/vulkansdk/macOS/lib/libshaderc_shared.dylib /usr/local/lib/libshaderc_shared.1.dylib
           #sudo ln -s /usr/local/vulkansdk/macOS/lib/libspirv-cross-c-shared.dylib /usr/local/lib/libspirv-cross-c-shared.0.dylib
           #sudo ln -s /usr/local/vulkansdk/macOS/lib/libvulkan.dylib /usr/local/lib/libvulkan.1.dylib
@@ -79,9 +79,9 @@ jobs:
           /usr/local/Cellar/meson/0.62.2/libexec/bin/python3.10 -m pip install mako
           git clone https://github.com/haasn/libplacebo.git
           cd libplacebo
-          export PKG_CONFIG_PATH="/usr/local/vulkansdk/macOS/lib/pkgconfig/:$PKG_CONFIG_PATH"
+          #export PKG_CONFIG_PATH="/usr/local/vulkansdk/macOS/lib/pkgconfig/:$PKG_CONFIG_PATH"
           DIR=./build
-          meson $DIR -Dopengl=enabled -Dvulkan=enabled -Ddemos=false -Dvulkan-registry=/usr/local/vulkansdk/macOS/share/vulkan/registry/vk.xml
+          meson $DIR -Dopengl=enabled -Dvulkan=disable -Ddemos=false
           ninja -C$DIR
           ninja -C$DIR install
           # https://github.com/mpv-player/mpv/issues/10063#issuecomment-1092413762
