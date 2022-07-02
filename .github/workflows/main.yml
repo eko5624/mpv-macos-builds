@@ -81,7 +81,7 @@ jobs:
           cd libplacebo
           #export PKG_CONFIG_PATH="/usr/local/vulkansdk/macOS/lib/pkgconfig/:$PKG_CONFIG_PATH"
           DIR=./build
-          meson $DIR -Dopengl=enabled -Dvulkan=disable -Ddemos=false
+          meson $DIR -Dopengl=enabled -Dvulkan=disabled -Ddemos=false
           ninja -C$DIR
           ninja -C$DIR install
           # https://github.com/mpv-player/mpv/issues/10063#issuecomment-1092413762
